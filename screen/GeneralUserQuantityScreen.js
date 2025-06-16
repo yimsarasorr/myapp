@@ -11,7 +11,7 @@ import {
   ActivityIndicator,
   Image,
 } from 'react-native';
-import { FIREBASE_DB } from '../screen/FirebaseConfig';
+import { FIREBASE_DB } from './FirebaseConfig';
 
 export default function GeneralUserQuantityScreen() {
   const navigation = useNavigation();

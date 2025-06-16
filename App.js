@@ -36,24 +36,23 @@ import PaymentScreen from './screen/PaymentScreen';
 import UploadSlipScreen from './screen/UploadSlipScreen';
 import NewServices from './screen/NewServices';
 import AdminScreen from './screen/AdminScreen';
-import AddPromotion from './screen/AddPromotion';
-import EditPromotion from './screen/EditPromotion';
+// import EditPromotion from './screen/EditPromotion';
 import AddScreen from './screen/AddScreen';
 import NotificationScreen from './screen/NotificationScreen';
 import AddServiceScreen from './screen/AddServiceScreen';
-import GeneralUserQuantityScreen from './screen/GeneralUserQuantityScreen';
-import EntrepreneurQuantityScreen from './screen/EntrepreneurQuantityScreen';
-import ServicesQuantityScreen from './screen/ServicesQuantityScreen';
-import BlogQuantityScreen from './screen/BlogQuantityScreen';
-import PromotionQuantityScreen from './screen/PromotionQuantityScreen';
+import GeneralUserQuantityScreen from './screen/GeneralUserQuantityScreen.js';
+// import EntrepreneurQuantityScreen from './screen/EntrepreneurQuantityScreen';
+import ServicesQuantityScreen from './screen/ServicesQuantityScreen.js';
+// import BlogQuantityScreen from './screen/BlogQuantityScreen';
+// import PromotionQuantityScreen from './screen/PromotionQuantityScreen';
 import AddBlog from './screen/AddBlog';
 import BlogList from './screen/BlogList';
 import SlipDetail from './screen/SlipDetail';
 import AdminNoti from './screen/AdminNoti';
 import CampaignReportScreen from './screen/CampaignReportScreen';
-import EditBlog from './screen/EditBlog';
-import EditService from './screen/EditService';
-import EditUserScreen from './screen/EditUserScreen';
+// import EditBlog from './screen/EditBlog';
+// import EditService from './screen/EditService';
+// import EditUserScreen from './screen/EditUserScreen';
 import AddServices from './screen/AddServices';
 import AddPromotionScreen from './screen/AddPromotionScreen';
 
@@ -250,7 +249,6 @@ const GeneralUserStackNavigator = ({ user, onLogout }) => (
   </GeneralUserStack.Navigator>
 );
 
-// EntrepreneurStackNavigator should be referencing EntrepreneurTabs on the first screen
 const EntrepreneurStackNavigator = ({ user, onLogout }) => (
   <EntrepreneurStack.Navigator
     initialRouteName="EntrepreneurTabs"
@@ -266,7 +264,6 @@ const EntrepreneurStackNavigator = ({ user, onLogout }) => (
     >
       {props => <EntrepreneurTabs {...props} user={user} onLogout={onLogout} />}
     </EntrepreneurStack.Screen>
-    <EntrepreneurStack.Screen name="EntrepreneurHome" component={EntrepreneurHome} options={{ headerShown: false }} />
     <EntrepreneurStack.Screen name="NewServices" component={NewServices} options={{ headerShown: true }} />
     <EntrepreneurStack.Screen name="Menu" component={Menu} options={{ headerShown: false }} />
     <EntrepreneurStack.Screen name="AddMapScreen" component={AddMapScreen} />
@@ -291,23 +288,23 @@ const AdminStackNavigator = ({ user }) => (
    
     {/* Other Admin Screens */}
     <Stack.Screen name="AddPromotionScreen" component={AddPromotionScreen} />
-    <Stack.Screen name="EditPromotion" component={EditPromotion} />
+    {/* <Stack.Screen name="EditPromotion" component={EditPromotion} /> */}
     <Stack.Screen name="AddScreen" component={AddScreen} />
     <Stack.Screen name="NotificationScreen" component={NotificationScreen} />
     <Stack.Screen name="AddServiceScreen" component={AddServiceScreen} />
     <Stack.Screen name="GeneralUserQuantityScreen" component={GeneralUserQuantityScreen} />
-    <Stack.Screen name="EntrepreneurQuantityScreen" component={EntrepreneurQuantityScreen} />
+    {/* <Stack.Screen name="EntrepreneurQuantityScreen" component={EntrepreneurQuantityScreen} /> */}
     <Stack.Screen name="ServicesQuantityScreen" component={ServicesQuantityScreen} />
-    <Stack.Screen name="BlogQuantityScreen" component={BlogQuantityScreen} />
-    <Stack.Screen name="PromotionQuantityScreen" component={PromotionQuantityScreen} />
+    {/* <Stack.Screen name="BlogQuantityScreen" component={BlogQuantityScreen} /> */}
+    {/* <Stack.Screen name="PromotionQuantityScreen" component={PromotionQuantityScreen} /> */}
     <Stack.Screen name="AddBlog" component={AddBlog} />
     <Stack.Screen name="BlogList" component={BlogList} />
     <Stack.Screen name="SlipDetail" component={SlipDetail} />
     <Stack.Screen name="AdminNoti" component={AdminNoti} />
     <Stack.Screen name="CampaignReportScreen" component={CampaignReportScreen} />
-    <Stack.Screen name="EditBlog" component={EditBlog} />
-    <Stack.Screen name="EditService" component={EditService} />
-    <Stack.Screen name="EditUserScreen" component={EditUserScreen} options={{ headerShown: false }} />
+    {/* <Stack.Screen name="EditBlog" component={EditBlog} /> */}
+    {/* <Stack.Screen name="EditService" component={EditService} /> */}
+    {/* <Stack.Screen name="EditUserScreen" component={EditUserScreen} options={{ headerShown: false }} /> */}
     <Stack.Screen name="AddServices" component={AddServices} />
     <Stack.Screen name="AddMapScreen" component={AddMapScreen} />
   </Stack.Navigator>

@@ -14,7 +14,7 @@ import {
   TextInput,
   ScrollView,
 } from 'react-native';
-import { FIREBASE_DB } from '../screen/FirebaseConfig';
+import { FIREBASE_DB } from './FirebaseConfig';
 
 export default function ServicesQuantityScreen() {
   const navigation = useNavigation();
