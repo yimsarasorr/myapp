@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "my-new-app",
-    "slug": "my-new-app",
+    "name": "Halal Way",
+    "slug": "halal-way",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -11,13 +11,17 @@
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
     "ios": {
       "supportsTablet": true,
       "infoPlist": {
-        "NSPhotoLibraryUsageDescription": "This app needs access to your photo library to let you choose profile pictures.",
-        "NSCameraUsageDescription": "This app needs access to your camera to let you take profile pictures."
+        "NSPhotoLibraryUsageDescription": "แอปนี้ต้องการเข้าถึงคลังรูปภาพของคุณเพื่อให้คุณเลือกรูปโปรไฟล์และรูปสถานที่",
+        "NSCameraUsageDescription": "แอปนี้ต้องการเข้าถึงกล้องของคุณเพื่อให้คุณถ่ายรูปโปรไฟล์และรูปสถานที่",
+        "NSLocationWhenInUseUsageDescription": "แอปนี้ต้องการเข้าถึงตำแหน่งของคุณเพื่อแสดงบริการใกล้เคียง"
       },
-      "bundleIdentifier": "com.anonymous.mynewapp"
+      "bundleIdentifier": "com.yourcompany.halalway"
     },
     "android": {
       "adaptiveIcon": {
@@ -29,14 +33,30 @@
         "CAMERA",
         "READ_EXTERNAL_STORAGE",
         "WRITE_EXTERNAL_STORAGE",
-        "CAMERA",
-        "READ_EXTERNAL_STORAGE",
-        "WRITE_EXTERNAL_STORAGE"
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_COARSE_LOCATION",
+        "INTERNET"
       ],
-      "package": "com.anonymous.mynewapp"
+      "package": "com.anonymous.mynewapp",
+      "config": {
+        "googleMaps": {
+          "apiKey": "AIzaSyBx9u44PzTUWorLe1hepijyzD6fHv3ZFKw"
+        }
+      }
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-camera",
+      "expo-image-picker",
+      "expo-location",
+      "expo-dev-client"
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "8346039d-b8d6-4b81-adf4-c9e7991f97d1"
+      }
     }
   }
 }
